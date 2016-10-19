@@ -47,7 +47,10 @@ class Student {
     }
 
     public void setAge(int i) {
-        Age = i;
+        if (i > 0 && i < 120)
+            Age = i;
+        else
+            System.out.println("年龄超限");
     }
 
     public String toString() {
