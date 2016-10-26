@@ -6,7 +6,12 @@ public class Student extends Person {
     private double Score;
 
     static public void main(String[] args) {
+        Person.id = 100;
         Person p = new Student();
+        System.out.println(p.getAge());
+        Person q = new Person();
+        p.getAge();
+        System.out.println(q.getAge());
         p.setAge(20);
         p.setName("Hello");
         System.out.println(p.getInfo());

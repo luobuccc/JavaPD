@@ -3,9 +3,16 @@
  */
 public class Person {
     private String name;
-    private int age;
+    private static int age = 10;
+    public static int id = 0;
+
+    static {
+        System.out.println("Static call");
+    }
 
     public Person() {
+        ++id;
+        age = id;
 
     }
 
