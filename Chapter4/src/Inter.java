@@ -5,12 +5,12 @@
 public class Inter {
     static void test(O o) {
         o.Create();
-        ;
     }
 
     static public void main(String[] args) {
-        test(new O1());
-        test(new O2());
+        Class<?> c = O1.class;
+        System.out.println(c.getConstructors());
+        System.out.println(c.getDeclaredFields());
     }
 }
 

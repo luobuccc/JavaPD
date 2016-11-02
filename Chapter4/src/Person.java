@@ -4,6 +4,11 @@
 public class Person {
     private String name;
     private static int age = 10;
+
+    public static int getId() {
+        return id;
+    }
+
     public static int id = 0;
 
     static {
