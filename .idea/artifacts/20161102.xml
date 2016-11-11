@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="20161102">
+    <output-path>$PROJECT_DIR$/out/artifacts/20161102</output-path>
+    <root id="archive" name="20161102.jar">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/Chapter4/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
