@@ -1,6 +1,5 @@
-package Package6;
+package Chapter6;
 
-import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -19,7 +18,7 @@ public class Test {
         int[] x = {1, 2, 3, 4};
         int[] y = new int[10];
         System.arraycopy(x, 0, y, 2, 4);
-        System.out.println(Arrays.toString(y));
+        System.out.println(System.getProperty("java.version"));
 
 
     }
