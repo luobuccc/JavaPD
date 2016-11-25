@@ -26,7 +26,6 @@ public class StringUtils {
         getDate.printDate(new getDate().getFirstDayOfLastWeek());//获取上周第一天
         getDate.printDate(new getDate().getFirstDayOfThisMouth());//获取本月第一天
         getDate.printDate(new getDate().getFirstDayOfLastMouth());//获取上月第一天
-
     }
 }
 
@@ -88,9 +87,7 @@ class P4 {
             if (str[i] == c && str[i - 1] != c)
                 count++;
         return count;
-
     }
-
 }
 
 class P5 {
@@ -104,20 +101,12 @@ class P5 {
 }
 
 class P3$ {
-    private char[] array = new char[26];
-
-    {                                       //实例初始化
-        for (int i = 0; i < 26; i++)
-            array[i] = (char) ('a' + i);
-    }
-
-    char[] create(int i) {
-        char dst[] = new char[i];
+    Character[] create(int i) {
+        Set<Character> S = new TreeSet<>();
         Random ram = new Random(System.currentTimeMillis());
-        for (int j = 0; j < i; j++)
-            dst[j] = array[ram.nextInt(26)];
-        Arrays.sort(dst);
-        return dst;
+        while (S.size() < i)
+            S.add((char) (ram.nextInt(26) + 'a'));
+        return S.toArray(new Character[0]);
     }
 }
 
