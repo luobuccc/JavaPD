@@ -5,6 +5,10 @@ import java.util.List;
 import java.util.Objects;
 import java.util.Random;
 
+interface Generator<T> {
+    T next();
+}
+
 /**
  * Created by PuFan on 2016/10/19.
  */
@@ -27,13 +31,9 @@ public class Zoo {
     }
 }
 
-interface Generator<T> {
-    T next();
-}
-
 class PetGenerate implements Generator<Animal> {
-    private Class[] A = {Fish.class, Bird.class, Dog.class, Cat.class};
     static Random rand = new Random(73);
+    private Class[] A = {Fish.class, Bird.class, Dog.class, Cat.class};
 
     public Animal next() {
         try {
@@ -45,6 +45,19 @@ class PetGenerate implements Generator<Animal> {
 }
 
 class Animal {
+    private String name;
+    private int legs;
+
+    public Animal(String name, int legs) {
+        this.name = name;
+        this.legs = legs;
+    }
+
+    public Animal() {
+        this.name = "Animal";
+        this.legs = 4;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -59,9 +72,6 @@ class Animal {
         return Objects.hash(name, legs);
     }
 
-    private String name;
-    private int legs;
-
     public String getName() {
         return name;
     }
@@ -70,23 +80,12 @@ class Animal {
         this.name = name;
     }
 
-    public void setLegs(int legs) {
-        this.legs = legs;
-    }
-
     public int getLegs() {
         return legs;
     }
 
-    public Animal(String name, int legs) {
-        this.name = name;
+    public void setLegs(int legs) {
         this.legs = legs;
-    }
-
-
-    public Animal() {
-        this.name = "Animal";
-        this.legs = 4;
     }
 
     public void move() {

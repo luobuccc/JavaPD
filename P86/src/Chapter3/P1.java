@@ -42,15 +42,15 @@ class Student {
         return Age;
     }
 
-    public String getName() {
-        return Name;
-    }
-
     public void setAge(int i) {
         if (i > 0 && i < 120)
             Age = i;
         else
             System.out.println("年龄超限");
+    }
+
+    public String getName() {
+        return Name;
     }
 
     public String toString() {

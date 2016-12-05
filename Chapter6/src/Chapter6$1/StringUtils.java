@@ -21,6 +21,7 @@ public class StringUtils {
         System.out.println(new P4().count("abbaaccaaddeeaaffaa", 'a'));//统计字符在字符串中出现次数 方法一
         System.out.println(new P4().count1("abbaaccaaddeeaaffaa", 'a'));//统计字符在字符串中出现次数 方法二
         System.out.println(new P5().leftPad("ABCD", 5, '#'));//字符串左部填充
+        System.out.println(new P7().userName("Jack0213!"));
         System.out.println(Arrays.toString(new P3$().create(5)));//生成随机数组并排序
         getDate.printDate(new getDate().getFirstDayOfThisWeek());//获取本周第一天
         getDate.printDate(new getDate().getFirstDayOfLastWeek());//获取上周第一天
@@ -140,5 +141,14 @@ class getDate {
         now.set(Calendar.MONTH, now.get(Calendar.MONTH) - 1);
         now.set(Calendar.DAY_OF_MONTH, 1);
         return now.getTime();
+    }
+}
+
+class P7 {
+    public boolean userName(String str) {
+        Matcher m = Pattern.compile("^[A-Za-z]\\w{5,19}").matcher(str);
+        if (m.find()) return true;
+        else
+            return false;
     }
 }

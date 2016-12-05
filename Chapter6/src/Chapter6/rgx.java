@@ -9,12 +9,14 @@ import java.util.regex.Pattern;
 
 public class rgx {
     static public void main(String[] args) {
-        String str = "java ajava bjvac djavadoc java";
-        String str1 = "Lcmaasasa";
-        String pat = "\\.*java\\.*";
-        String pat1 = "^[a-zA-z]\\w{5,19}";
-        Matcher m = Pattern.compile(pat1).matcher(str1);
+        int count = 0;
+        String str = "java ajava bjavac djavadoc java";
+        String pat = "java";
+        Matcher m = Pattern.compile(pat).matcher(str);
+        while (m.find())
+            ++count;
+        System.out.println(count);
 
-        System.out.println(m.matches());
+
     }
 }

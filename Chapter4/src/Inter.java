@@ -1,3 +1,7 @@
+interface O {
+    void Create();//static final
+}
+
 /**
  * Created by PuFan on 2016/10/26.
  */
@@ -12,10 +16,6 @@ public class Inter {
         System.out.println(c.getConstructors());
         System.out.println(c.getDeclaredFields());
     }
-}
-
-interface O {
-    void Create();//static final
 }
 
 class O1 implements O {

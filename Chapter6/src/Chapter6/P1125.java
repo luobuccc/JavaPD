@@ -51,6 +51,12 @@ public class P1125 {
     }
 
     static public void main(String[] args) {
+        String test = "a<tr>aava </tr>abb ";
+        String test2 = "<tr>";
+        String reg = "<.++>";
+        String reg2 = "<tr>";
+        System.out.println(test.replaceAll(reg, "###"));
+        System.out.println(test2.replaceAll(reg2, "###"));
         System.out.println(Arrays.toString(Split("no pains,no gains")));
         System.out.println(Arrays.toString(Split1("no pains,no gains.")));//修改源字符串符合语法规则。
         System.out.println(decrypt(encrypt("abcdeABCDEzZ")));

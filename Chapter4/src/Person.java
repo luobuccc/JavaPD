@@ -2,23 +2,23 @@
  * Created by PuFan on 2016/10/26.
  */
 public class Person {
-    private String name;
-    private static int age = 10;
-
-    public static int getId() {
-        return id;
-    }
-
     public static int id = 0;
+    private static int age = 10;
 
     static {
         System.out.println("Static call");
     }
 
+    private String name;
+
     public Person() {
         ++id;
         age = id;
 
+    }
+
+    public static int getId() {
+        return id;
     }
 
     static public void main(String[] args) {

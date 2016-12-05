@@ -1,5 +1,13 @@
 package Chapter3;
 
+interface Product {
+    void showName();
+}
+
+interface Factor {
+    Product gengerate();
+}
+
 /**
  * Created by PuFan on 2016/10/19.
  */
@@ -9,14 +17,6 @@ public class Factory {
         Product p0 = new Factor2().gengerate();
         p.showName();
     }
-}
-
-interface Product {
-    void showName();
-}
-
-interface Factor {
-    Product gengerate();
 }
 
 class Product1 implements Product {
