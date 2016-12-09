@@ -1,7 +1,9 @@
+import java.util.Collection;
+
 /**
  * Created by PuFan on 2016/12/9.
  */
-public class Generate<T> {
+public class Generate<T extends Collection> {
     private T data;
 
     public Generate(T data) {
@@ -23,4 +25,5 @@ public class Generate<T> {
     public void getclass() {
         System.out.println("x" + data.getClass().toString());
     }
+
 }
