@@ -20,13 +20,14 @@ public class P1202$2 {
 }
 
 class match {
+
     private static int time = 0;
     private int meters = 1000;
     private boolean flag = true;
 
     private synchronized int getTime() {
         try {
-            Thread.sleep(1000);
+            TimeUnit.MILLISECONDS.sleep(1000);
             return ++time;
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
@@ -51,6 +52,7 @@ class match {
                 }
                 nowmeters = rabbitSpeed * getTime();
                 System.out.println("Rabbit running " + nowmeters + " meters");
+
                 if (nowmeters % rab_restM == 0)
                     try {
                         TimeUnit.MILLISECONDS.sleep(500);
