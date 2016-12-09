@@ -19,4 +19,8 @@ public class Generate<T> {
     public void setData(T data) {
         this.data = data;
     }
+
+    public void getclass() {
+        System.out.println("x" + data.getClass().toString());
+    }
 }
