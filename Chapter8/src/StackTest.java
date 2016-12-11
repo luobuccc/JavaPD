@@ -5,8 +5,8 @@
  */
 public class StackTest {
     static public void main(String[] args) {
-        Stack<String> S = new Stack<>();
-        for (String s : "This is a Stack Test".split(" "))
+        ListStack<String> S = new ListStack<>(10);
+        for (String s : "This is a LinkedStack Test".split(" "))
             S.push(s);
         String st;
         while ((st = S.pop()) != null)
@@ -14,7 +14,7 @@ public class StackTest {
     }
 }
 
-class Stack<T> {
+class LinkedStack<T> {
     Node<T> top = new Node<T>();//End sentinel 末端哨兵
 
     public void push(T element) {
@@ -47,3 +47,43 @@ class Stack<T> {
         }
     }
 }
+
+class ListStack<T> {
+    private int top = -1;
+    private int maxsize;
+    private Object[] element;
+
+    public ListStack(int maxsize) {
+        this.maxsize = maxsize;
+        element = new Object[maxsize];
+    }
+
+    public boolean isEmpty() {
+        return top == -1;
+    }
+
+    private boolean isFull() {
+        return top == maxsize - 1;
+    }
+
+    public boolean push(T val) {
+        if (isFull()) return false;
+        else {
+            element[++top] = val;
+            return true;
+        }
+    }
+
+    public T peek() {
+        if (!isEmpty())
+            return (T) element[top];
+        else return null;
+    }
+
+    public T pop() {
+        if (!isEmpty())
+            return (T) element[top--];
+        else return null;
+    }
+}
+
