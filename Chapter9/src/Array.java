@@ -13,21 +13,8 @@ public class Array {
         String[] S = new String[2];
         S[1] = "hhh";
         Integer[] i = new Integer[20];
-        和 和1 = new 和(5);
-        和1.getData();
 
 
     }
 }
 
-class 和 {
-    int data;
-
-    public 和(int data) {
-        this.data = data;
-    }
-
-    public int getData() {
-        return data;
-    }
-}

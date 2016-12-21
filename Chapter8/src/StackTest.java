@@ -58,7 +58,7 @@ class ListStack<T> {
         element = new Object[maxsize];
     }
 
-    public boolean isEmpty() {
+    private boolean isEmpty() {
         return top == -1;
     }
 
@@ -81,9 +81,9 @@ class ListStack<T> {
     }
 
     public T pop() {
-        if (!isEmpty())
+        if (!isEmpty()) {
             return (T) element[top--];
-        else return null;
+        } else return null;
     }
 }
 

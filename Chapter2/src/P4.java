@@ -1,5 +1,3 @@
-package Chapter2;
-
 /**
  * Created by PuFan on 2016/9/30.
  */
