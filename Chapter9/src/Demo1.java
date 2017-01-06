@@ -1,3 +1,4 @@
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -7,6 +8,8 @@ import java.util.List;
  * Created by PuFan on 2016/12/16.
  */
 public class Demo1 {
+    private JPanel SwingDemo1;
+
     public static void main(String[] args) {
         String things[] = {"eggs", "water", "fish", "meat", "apples"};
         List<String> L = new ArrayList<>(Arrays.asList(things));
