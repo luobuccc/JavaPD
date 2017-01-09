@@ -18,12 +18,9 @@ public class Listener extends JFrame implements ActionListener {
         ctn.add(lb, BorderLayout.CENTER);
         ctn.add(bt1, BorderLayout.SOUTH);
         bt1.addActionListener(this);
-
-
         this.setSize(300, 200);
         this.setVisible(true);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 
     public static void main(String[] args) {
@@ -33,7 +30,6 @@ public class Listener extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         lb.setText("110");
-
 
     }
 }
