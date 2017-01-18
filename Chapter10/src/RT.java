@@ -28,7 +28,6 @@ public class RT {
                 if (str.equals("exit"))
                     break;
                 BW.write(str);
-
             }
             BW.flush();
             BW.close();

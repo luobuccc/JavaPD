@@ -1,4 +1,6 @@
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.FileChannel;
 
@@ -18,7 +20,6 @@ public class StreamTest {
             while ((s = b.read(contents)) != -1)
                 strFileContents = new String(contents, 0, s);
             System.out.println(strFileContents);
-
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -70,8 +71,6 @@ public class StreamTest {
         try {
             FileChannel in = new FileInputStream("H:\\\\test\\\\10.jpg").getChannel();
             FileChannel out = new FileOutputStream("H:\\\\test\\\\te1.jpg").getChannel();
-            BufferedReader X = new BufferedReader(new FileReader("H:\\\\test\\\\10.jpg"));
-            BufferedWriter BW = new BufferedWriter(new FileWriter("H:\\\\test\\\\10.jpg"));
             // ByteBuffer B=ByteBuffer.allocate(1024);
             // IntBB.asIntBuffer();
             //BufferedWriter BW=new BufferedWriter();

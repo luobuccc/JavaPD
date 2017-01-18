@@ -8,7 +8,6 @@ public class serialize {
         try {
             ObjectOutputStream OS = new ObjectOutputStream(new FileOutputStream("H:\\test\\obj.test"));
             OS.writeObject(new person("Me", 20));
-
             OS.flush();
             OS.close();
             ObjectInputStream OI = new ObjectInputStream(new FileInputStream("H:\\test\\obj.test"));
