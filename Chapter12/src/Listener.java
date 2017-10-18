@@ -30,6 +30,5 @@ public class Listener extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         lb.setText("110");
-
     }
 }

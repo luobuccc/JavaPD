@@ -32,7 +32,6 @@ public class httpreq {
                 out.write(key + "=" + value);
                 if (it.hasNext())
                     out.write("&");
-
             }
             out.close();
             conn.connect();
@@ -40,7 +39,6 @@ public class httpreq {
             for (String line = null; (line = br.readLine()) != null; )
                 System.out.println(line);
             br.close();
-
         } catch (IOException e) {
             e.printStackTrace();
         }
